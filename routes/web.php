@@ -14,5 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homePage');
 });
+
+// ホーム画面(homePage)のURL割当、起動コントローラ・関数指定
+Route::get('welcome', 'App\Http\Controllers\homeController@moveHomePage'); 
+
+//結果画面(resultPage)のURL割当、起動コントローラ・関数指定
+Route::post('formPosts', 'App\Http\Controllers\postController@formPosts');
+
+//投稿画面(postPage)のURL割当、起動コントローラ・関数指定
+Route::get('postPage', 'App\Http\Controllers\postController@movePostPage');
