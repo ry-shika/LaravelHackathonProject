@@ -17,6 +17,9 @@
       <input type="submit" value="投稿">
     </form>
 
-    <a href="{{action('homeController@moveHomePage')}}">ホーム画面に戻る</a>
+    <form action="/welcome" >
+            @csrf
+            <button type="submit">ホームページに戻る</button>
+    </form>
   </body>
 </html>

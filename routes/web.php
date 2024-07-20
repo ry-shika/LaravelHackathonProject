@@ -12,13 +12,24 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\WelcomeController;
 
-Route::get('/', function () {
-    return view('homePage');
-});
+//ルート設定を変更
+Route::get('/', [WelcomeController::class, 'index']);
+
+// コメントを保存するためのルート
+Route::post('/comments', [CommentController::class, 'store']);
+
+// Route::get('/', function () {
+//     return view('homePage');
+// });
 
 // ホーム画面(homePage)のURL割当、起動コントローラ・関数指定
-Route::get('welcome', 'App\Http\Controllers\homeController@moveHomePage'); 
+Route::get('welcome', 'App\Http\Controllers\WelcomeController@index'); 
+
+// ホーム画面(homePage)のURL割当、起動コントローラ・関数指定
+Route::get('homepage', 'App\Http\Controllers\homeController@moveHomePage'); 
 
 //結果画面(resultPage)のURL割当、起動コントローラ・関数指定
 Route::post('formPosts', 'App\Http\Controllers\postController@formPosts');

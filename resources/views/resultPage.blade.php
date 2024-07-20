@@ -10,6 +10,10 @@
         <div>形状：{{$shape}}</div>
         <div>拾った日時：{{$time}}</div>
         <a href="{{action('postController@movePostPage')}}">投稿画面に戻る</a>
-        <a href="{{action('homeController@moveHomePage')}}">ホーム画面に戻る</a>
+        
+        <form action="/welcome" >
+            @csrf
+            <button type="submit">ホームページに戻る</button>
+        </form>
     </body>
 </html>
