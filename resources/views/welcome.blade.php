@@ -5,10 +5,14 @@
 <head>
     <!-- ページのタイトル -->
     <title>tablepage</title>
+    </style>
+</head>
+<body>
 </head>
 <body>
 
 <h1>Welcome to the Folders List</h1>
+
 
 <!-- 成功メッセージの表示 -->
 @if (session('success'))
@@ -64,6 +68,11 @@
         @endforeach
     </tbody>
 </table>
+
+<form action="/postPage" >
+    @csrf
+    <button type="submit">Submit</button>
+</form>
 
 </body>
 </html>
