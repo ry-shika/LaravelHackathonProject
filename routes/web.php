@@ -12,7 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\WelcomeController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// ルート設定を変更
+Route::get('/', [WelcomeController::class, 'index']);
+
+// コメントを保存するためのルート
+Route::post('/comments', [CommentController::class, 'store']);
