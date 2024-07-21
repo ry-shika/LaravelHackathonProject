@@ -12,7 +12,7 @@
 }
 
 .header {
-    height: 7vh;
+    height: 10vh;
     background-color: lightcyan;
     box-sizing: border-box;
     border: 8px solid blue;
@@ -110,7 +110,7 @@
 .flex-content {
     display: flex;
     flex-direction: column;
-    height: 90vh;
+    height: 85vh;
     flex-grow: 1;
     background-color: palegoldenrod;
     box-sizing: border-box;
