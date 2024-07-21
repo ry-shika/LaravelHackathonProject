@@ -26,6 +26,7 @@
             <th>Updated At</th>
             <th>Comments</th>
             <th>Add Comment</th>
+            <th>Add image</th>
         </tr>
     </thead>
     <tbody>
@@ -50,6 +51,14 @@
                     <input type="hidden" name="folder_id" value="{{ $folder->id }}">
                     <input type="text" name="comment" placeholder="Add a comment" required>
                     <button type="submit">Submit</button>
+                </form>
+            </td>
+            <td>
+                <form action="/add_image" method="POST">
+                    @csrf
+                    <input type="hidden" name="folder_id" value="{{ $folder->id }}">
+
+                    <button type="submit">add images</button>
                 </form>
             </td>
         </tr>

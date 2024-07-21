@@ -23,8 +23,7 @@
         <input type="hidden" name="color" value="{{ $color }}">
         <input type="hidden" name="shape" value="{{ $shape }}">
         <input type="hidden" name="time" value="{{ $time }}">
-        <input type="hidden" name="folder_id" value="{{ $id }}">
-        <!-- <button type="submit">次へ</button> -->
+        <button type="submit">次へ</button>
     </form>
 </body>
 </html>

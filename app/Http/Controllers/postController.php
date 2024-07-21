@@ -21,7 +21,7 @@ class postController extends Controller
         $folder->color = $request->color;
         $folder->shape = $request->shape;
         $folder->time = $request->time;
-        $folder->id = $request->folder_id;
+        $folder->id = $request->id;
         //$folder->save();
         return view('resultPage', $folder);
     }

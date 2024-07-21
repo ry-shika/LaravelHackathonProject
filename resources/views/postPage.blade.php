@@ -16,7 +16,7 @@
         <div>色：<input type="text" name="color"></div>
         <div>形状：<input type="text" name="shape"></div>
         <div>拾った日時：<input type="text" name="time"></div>
-        <input type="hidden" name="folder_id" value="{$id}">
+        <input type="hidden" name="id" value="{$id}">
         <button type="submit">次へ</button>
     </form>
 
