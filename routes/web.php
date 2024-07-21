@@ -14,12 +14,33 @@ use Illuminate\Support\Facades\Route;
 */
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\imagepageController;
+use App\Http\Controllers\PostController;
+use App\Http\Controllers\ImageUploadController;
+use App\Http\Controllers\to_imagepage;
 
 //ルート設定を変更
 Route::get('/', [WelcomeController::class, 'index']);
 
+//ルート設定を変更
+Route::get('/next', [WelcomeController::class, 'index']);
+
+
+// ルートファイル (web.php)
+Route::post('/add_image/{id}', 'to_imagepage@moveimagepage');
+
 // コメントを保存するためのルート
 Route::post('/comments', [CommentController::class, 'store']);
+
+//画像を保存するルート
+Route::post('/image_upload', [ImageUploadController::class, 'store']);
+
+//画像を保存するルート
+Route::post('/add_image', [to_imagepage::class, 'moveimagepage']);
+
+
+// 画像保存ページへの遷移
+Route::post('/next', [imagepageController::class, 'next']); 
 
 // Route::get('/', function () {
 //     return view('homePage');

@@ -1,19 +1,29 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>投稿内容確認</title>
-    </head>
-    <body>
-        <h1>POST結果</h1>
-        <div>種類：{{$name}}</div>
-        <div>拾った場所：{{$place}}</div>
-        <div>色：{{$color}}</div>
-        <div>形状：{{$shape}}</div>
-        <div>拾った日時：{{$time}}</div>
-        <a href="{{action('postController@movePostPage')}}">投稿画面に戻る</a>
-        
-        <form action="/welcome" >
-            @csrf
-            <button type="submit">ホームページに戻る</button>
-        </form>
-    </body>
+<head>
+    <title>投稿内容確認</title>
+</head>
+<body>
+    <h1>POST結果</h1>
+    <div>種類：{{$name}}</div>
+    <div>拾った場所：{{$place}}</div>
+    <div>色：{{$color}}</div>
+    <div>形状：{{$shape}}</div>
+    <div>拾った日時：{{$time}}</div>
+    
+    <form action="/postPage" method="GET">
+        @csrf
+        <button type="submit">戻る</button>
+    </form>
+
+    <form action="/next" method="POST">
+        @csrf
+        <input type="hidden" name="name" value="{{ $name }}">
+        <input type="hidden" name="place" value="{{ $place }}">
+        <input type="hidden" name="color" value="{{ $color }}">
+        <input type="hidden" name="shape" value="{{ $shape }}">
+        <input type="hidden" name="time" value="{{ $time }}">
+        <button type="submit">次へ</button>
+    </form>
+</body>
 </html>
