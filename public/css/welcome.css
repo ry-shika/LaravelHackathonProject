@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .app {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header {
+    height: 10vh;
+    background-color: lightcyan;
+    box-sizing: border-box;
+    border: 8px solid blue;
+    border-radius: 20px;
+  }
+
+  .body {
+    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+  }
+
+  .sidebar {
+    width: 20vw;
+    background-color: moccasin;
+    box-sizing: border-box;
+    border: 8px solid chocolate;
+  }
+
+  .homeButton {
+    height: 10vh;
+    background-color: aqua;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .searchButton {
+    height: 10vh;
+    background-color: gray;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .postButton {
+    height: 10vh;
+    width: 100%;
+    background-color: palegreen;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .postButton:hover {
+    background: white;
+    color: palegreen;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .flex-content {
+    height: 50vh;
+    /* flex-grow: 1; */
+    background-color: palegoldenrod;
+    box-sizing: border-box;
+    border: 8px solid green;
+    overflow: auto;
+  }
+  
+  .fixed-content {
+    flex-grow: 1;
+    /* height: 128px; */
+    background-color: thistle;
+    box-sizing: border-box;
+    border: 8px solid darkmagenta;
+  }
