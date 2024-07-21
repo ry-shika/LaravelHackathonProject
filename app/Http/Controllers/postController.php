@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Folder;
 
 class postController extends Controller
 {
@@ -13,13 +14,15 @@ class postController extends Controller
 
     public function formPosts(Request $request)
     {
-        $data = [
-            'name'=>$request->name,
-            'place'=>$request->place,
-            'color'=>$request->color,
-            'shape'=>$request->shape,
-            'time'=>$request->time,
-        ];
-        return view('resultPage', $data);
+        
+        $folder = new Folder();
+        $folder->name = $request->name;
+        $folder->place = $request->place;
+        $folder->color = $request->color;
+        $folder->shape = $request->shape;
+        $folder->time = $request->time;
+        $folder->id = $request->folder_id;
+        //$folder->save();
+        return view('resultPage', $folder);
     }
 }
