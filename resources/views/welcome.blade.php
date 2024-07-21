@@ -19,7 +19,7 @@
 
             <div class="body">
                 <div class="sidebar">
-                    <form action="/welcome" >
+                    <form  action="/welcome" >
                         @csrf
                         <button class="homeButton">Home</button>
                     </form>
@@ -98,7 +98,7 @@
                         <form action="/postPage" method="GET">
                             @csrf
                             <input type="hidden" name="folder_id" value="{{ $folder->id }}">
-                            <button type="submit">Submit</button>
+                            <button class ="submit"  type="submit">Post</button>
                         </form>
                     </div>
                 </div>
